@@ -1,0 +1,44 @@
+{
+  "name": "Airtable to Google Sheets Sync",
+  "nodes": [
+    {
+      "parameters": {"rule": {"interval": [{"triggerAtHour": 9}]}},
+      "id": "sched-trigger",
+      "name": "Schedule",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "operation": "list",
+        "baseId": {"mode": "id", "value": "YOUR_BASE_ID"},
+        "table": {"mode": "list", "value": "YOUR_TABLE"}
+      },
+      "id": "airtable-list",
+      "name": "Airtable List",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": {"mode": "url", "value": "YOUR_SHEET_URL"},
+        "range": "A1"
+      },
+      "id": "gsheets-append",
+      "name": "Google Sheets Append",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.2,
+      "position": [650, 300]
+    }
+  ],
+  "connections": {
+    "Schedule": {"main": [[{"node": "Airtable List", "type": "main", "index": 0}]]},
+    "Airtable List": {"main": [[{"node": "Google Sheets Append", "type": "main", "index": 0}]]}
+  },
+  "settings": {"executionOrder": "v1", "timezone": "Asia/Shanghai"},
+  "tags": ["airtable", "google-sheets", "sync"],
+  "meta": {"templateCredsSetup": false}
+}
