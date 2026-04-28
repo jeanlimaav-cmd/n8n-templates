@@ -8,3 +8,4 @@
 - **unpaid_invoice_reminder.json** – Uses Cohere Embeddings, OpenAI Chat
 - **paypal_to_airtable.json** – Uses OpenAI Chat, OpenAI Embeddings
 - **transaction_logs_backup.json** – Uses Cohere Embeddings, OpenAI Chat, Supabase Vector
+- **free_invoice_reminder_google_sheets_email.json** – Google Sheets invoice tracker → due-soon filter → reminder email → reminder status update
