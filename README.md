@@ -61,4 +61,4 @@ Request new templates, improve prompts, or add integrations.
 Collabs welcome!
 ---
 
-_Made with ❤️ by Jay — “Automate everything, then automate the automation.”_
+_Updated with ❤️ by Jean — “Automate everything, then automate the automation.”_
