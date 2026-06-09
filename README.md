@@ -44,7 +44,7 @@ MASTER_README.md # ← you are here
 ## 🚀 Quick Start
 
 ```bash
-git clone <https://github.com/wassupjay/n8n-free-templates.git>
+git clone <https://github.com/jeanlimaav-cmd/n8n-free-templates.git>
 # then in n8n:
 # Settings ▸ Import Workflows ▸ select any JSON
 # Open each node ▸ Credentials ▸ choose or create your account
